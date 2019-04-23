@@ -107,6 +107,8 @@ class ruby (
 
   if $latest_release {
     $ruby_package_ensure = 'latest'
+  } elsif $version {
+    $ruby_package_ensure = $version
   } else {
     $ruby_package_ensure = 'installed'
   }
